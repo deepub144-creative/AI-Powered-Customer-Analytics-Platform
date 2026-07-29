@@ -1,118 +1,94 @@
+# AI-Powered-Customer-Intelligence-Platform
+
 # 📊 AI Powered Customer Intelligence Platform
 
-An end-to-end customer analytics platform that helps businesses understand customer behavior, predict churn, segment customers, and forecast future sales using Machine Learning and interactive dashboards.
-
-🔗 Live React Dashboard :  
-🔗 API Documentation :
 
 
+An end-to-end AI and Machine Learning project that helps businesses analyze customer behavior, predict churn, segment customers, and forecast future sales through an interactive React dashboard and FastAPI backend.
 
-🚀 Features
 
-👥 Customer Segmentation
-- RFM (Recency, Frequency, Monetary) analysis
-- K-Means clustering
-- Automatic segment labeling:
-  - Champions
-  - Loyal Customers
-  - Potential Loyalists
-  - At Risk
 
-⚠️ Churn Prediction
-- Predicts probability of customer churn
-- Risk classification:
-  - High
-  - Medium
-  - Low
+🔗 Live Dashboard: https://ai-powered-customer-analytics-platf.vercel.app/
 
-📈 Sales Forecasting
-- Time-series forecasting using Prophet
-- Future revenue prediction for customizable time horizons
 
-📂 CSV Upload Analytics
-- Upload retail transaction datasets
-- Automatic column detection
-- Dynamic customer analytics generation
 
-📄 PDF Report Generation
-- Business-ready downloadable analytics report
 
-🌐 Responsive Dashboard
-- Modern React + Vite frontend
-- Mobile-friendly interface
+
+
+📌 Project Overview
+
+
+This project was built as an advanced customer analytics platform for business intelligence and decision support. It covers the complete data science lifecycle — from data ingestion and preprocessing to machine learning modeling, forecasting, reporting, and deployment.
+
+
+
+- Dataset: Retail Customer Transaction Dataset
+- Segmentation Algorithm: K-Means Clustering
+- Churn Model: Classification Model (Scikit-learn)
+- Forecasting Model:Prophet Time-Series Forecasting
+- Backend:FastAPI REST API
+- Frontend: React + Vite Dashboard
+- Deployment: Vercel (Frontend) & Render/Railway/AWS (Backend)
+
+
+
+✨ Features
+
+
+
+- 👥 Customer Segmentation using RFM analysis
+- ⚠️ Churn Risk Prediction with probability scoring
+- 📈 Sales Forecasting for future revenue trends
+- 📂 CSV Upload Analytics  with automatic column detection
+- 📄 PDF Business Report Generation
+- 🌍 Responsive Dashboard  optimized for desktop and mobile
+- 💱 Multi-Currency Revenue Display
+- 🤖 AI-driven customer intelligence insights
+
 
 
 🛠️ Tech Stack
 
-🎨 Frontend
-<p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="50" title="React"/>
-  <img src="https://vitejs.dev/logo.svg" width="50" title="Vite"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50" title="HTML5"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50" title="CSS3"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50" title="JavaScript"/>
-</p>
-
-⚙️ Backend
-<p align="left">
-  <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" width="120" title="FastAPI"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50" title="Python"/>
-</p>
-
-🤖 Machine Learning & Data Science
-<p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" width="50" title="Pandas"/>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" width="60" title="Scikit-learn"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" width="50" title="NumPy"/>
-  <img src="https://raw.githubusercontent.com/facebook/prophet/main/docs/static/prophet_logo.png" width="70" title="Prophet"/>
-</p>
-
-📊 Visualization & Reporting
-<p align="left">
-  <img src="https://images.plot.ly/logo/new-branding/plotly-logomark.png" width="50" title="Plotly"/>
-  <img src="https://www.reportlab.com/rsrc/images/logo2.gif" width="120" title="ReportLab"/>
-</p>
-
-🗄️ Database / Data Storage
-<p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="50" title="MySQL"/>
-</p>
-
-☁️ Deployment & Tools
-<p align="left">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" width="50" title="Docker"/>
-  <img src="https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" width="50" title="Vercel"/>
-  <img src="https://www.vectorlogo.zone/logos/render/render-icon.svg" width="50" title="Render"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="50" title="Git"/>
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="50" title="GitHub"/>
-  <img src="https://code.visualstudio.com/assets/images/code-stable.png" width="50" title="VS Code"/>
-</p>
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Prophet](https://img.shields.io/badge/Prophet-0052CC?style=for-the-badge&logo=meta&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![ReportLab](https://img.shields.io/badge/ReportLab-PDF-red?style=for-the-badge)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
 
+Repository Structure
 
-📂 Project Structure
-
-
+```text
 customer-intelligence-platform/
 │
-├── api/                    # FastAPI backend
+├── api/                         # FastAPI backend
 │   └── main.py
 │
-├── ci-dashboard-react/     # React frontend
+├── ci-dashboard-react/          # React frontend dashboard
 │   ├── src/
 │   └── vite.config.js
 │
-├── data/
+├── data/                        # Customer datasets
 │   └── master_customers.csv
 │
-├── models/
+├── models/                      # Trained ML models
 │   ├── churn_model.joblib
 │   ├── kmeans_model.joblib
 │   ├── rfm_scaler.joblib
 │   ├── churn_features.joblib
 │   └── forecast_model.joblib
 │
-├── notebooks/              # EDA & model development
+├── notebooks/                   # EDA & model development
 ├── requirements.txt
 └── README.md
-```
