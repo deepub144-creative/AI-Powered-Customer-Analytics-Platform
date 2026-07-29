@@ -4,7 +4,7 @@ import { Upload, FileText, Download, Loader2, CheckCircle2 } from 'lucide-react'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { CurrencyContext } from '../App';
 
-const API_URL = 'http://localhost:8000';
+const API_URL = "http://127.0.0.1:8000";
 
 const FIELD_LABELS = {
   invoice: 'Invoice / Order ID',
