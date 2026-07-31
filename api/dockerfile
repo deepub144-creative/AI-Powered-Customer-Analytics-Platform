@@ -2,11 +2,19 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY requirements.txt .
+# Install API dependencies
+COPY api/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+# Copy API code and the sibling data/models folders it depends on,
+# preserving the same relative layout main.py expects (../models, ../data)
+COPY api/ ./api/
+COPY models/ ./models/
+COPY data/ ./data/
 
-EXPOSE 8000
+WORKDIR /app/api
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Hugging Face Spaces expects the container to listen on port 7860
+EXPOSE 7860
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]
