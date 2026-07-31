@@ -4,3 +4,6 @@ pandas
 scikit-learn
 prophet
 joblib
+reportlab
+python-multipart
+gradio
