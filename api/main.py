@@ -9,16 +9,23 @@ import json
 
 app = FastAPI(title="Customer Intelligence Platform API")
 
-# CORS: allow common local dev origins (Vite default is 5173, CRA default is 3000).
-# Add/remove ports here to match whatever your frontend actually runs on.
+# CORS: allow local dev origins, plus the deployed frontend via FRONTEND_URL env var.
+# Set FRONTEND_URL in Render's environment variables once you have your Vercel URL,
+# e.g. FRONTEND_URL=https://ci-dashboard.vercel.app
+frontend_url = os.environ.get("FRONTEND_URL")
+
+allowed_origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+if frontend_url:
+    allowed_origins.append(frontend_url)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-    ],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
