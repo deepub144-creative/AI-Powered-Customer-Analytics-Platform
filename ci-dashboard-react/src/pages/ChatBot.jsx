@@ -9,7 +9,7 @@ const FAQ = [
   { keys: ['champion'], answer: "Champions are your top customers: recent purchases, high frequency, and the highest average spend — typically the top 3-4% of customers by value." },
   { keys: ['at risk', 'atrisk'], answer: "At Risk customers haven't purchased in 180+ days on average. They're flagged early using behavioral signals (not just recency) so you can act before they fully churn." },
   { keys: ['pdf', 'report', 'download'], answer: "You can upload any client CSV on the 'Upload & Reports' page, and download a branded PDF report with segment summaries — auto-detecting your file's columns." },
-  { keys: ['who', 'built', 'creator', 'deepu', 'pavan', 'darshan', 'varun', 'ramya'], answer: "This platform was built by Pavan, Darshan, Varun, and Ramya — BCA (Data Science) students, combining segmentation, churn prediction, and sales forecasting into one deployed system using FastAPI, React, Docker, and AWS." },
+  { keys: ['who', 'built', 'creator', 'deepu', 'pavan', 'darshan', 'varun', 'ramya'], answer: "This platform was built by Pavan, Darshan, Varun, and Ramya — III BCA students, combining segmentation, churn prediction, and sales forecasting into one deployed system using FastAPI, React, Docker, and AWS." },
   { keys: ['tech', 'stack', 'built with'], answer: "Tech stack: Python (pandas, scikit-learn, Prophet) for ML, FastAPI for the backend, React for this dashboard, Docker for containerization, and Nginx + AWS EC2 for deployment." },
   { keys: ['accuracy', 'auc', 'performance'], answer: "The churn model scores 0.82 ROC-AUC with 84% recall — prioritizing catching real churners over raw accuracy, since missing an at-risk customer is costlier than a false alarm." },
 ];

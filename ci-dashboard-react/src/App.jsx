@@ -110,7 +110,7 @@ function Footer() {
   return (
     <div style={{ borderTop: `1px solid ${border}`, marginTop: '40px', padding: '20px 0', fontSize: '12px', color: '#8a8f98', textAlign: 'center' }}>
       <div>Created by <strong>Pavan, Darshan, Varun, Ramya</strong></div>
-      <div>Kalpataru First Grade Science College, Tiptur · BCA (Data Science) 2024–27</div>
+      <div>Kalpataru First Grade Science College, Tiptur · III BCA 2024–27</div>
     </div>
   );
 }
