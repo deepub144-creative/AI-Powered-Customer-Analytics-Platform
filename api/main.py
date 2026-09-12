@@ -223,7 +223,7 @@ async def generate_report(file: UploadFile = File(...), mapping: str = None):
 
     elems = [
         Paragraph("AI Powered Customer Analytics Platform", styles_title),
-        Paragraph("By Mr. Deepu B", styles_sub),
+        Paragraph("Created by Pavan, Darshan, Varun, Ramya", styles_sub),
         Paragraph(f"Report generated for uploaded dataset ({len(rfm)} customers analyzed)", styles_body),
         Paragraph("Customer Segmentation Summary", styles_h2),
     ]

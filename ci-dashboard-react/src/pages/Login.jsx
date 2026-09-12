@@ -66,7 +66,7 @@ export default function Login({ onLogin }) {
         </button>
 
         <div style={{ fontSize: '11px', color: '#8a8f98', marginTop: '24px' }}>
-          Created by Deepu B - Aspiring Data Analyst
+          Created by Pavan, Darshan, Varun, Ramya
         </div>
       </div>
     </div>

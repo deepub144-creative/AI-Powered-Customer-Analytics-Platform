@@ -7,8 +7,6 @@ import Forecast from './pages/Forecast';
 import UploadAnalyze from './pages/UploadAnalyze';
 import ChatBot from './pages/ChatBot';
 import Login from './pages/Login';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { SiLeetcode } from 'react-icons/si';
 
 export const CurrencyContext = createContext();
 export const ThemeContext = createContext();
@@ -111,19 +109,8 @@ function Footer() {
   const { border } = useContext(ThemeContext);
   return (
     <div style={{ borderTop: `1px solid ${border}`, marginTop: '40px', padding: '20px 0', fontSize: '12px', color: '#8a8f98', textAlign: 'center' }}>
-      <div>Created by <strong>Deepu B</strong> - Aspiring Data Analyst</div>
+      <div>Created by <strong>Pavan, Darshan, Varun, Ramya</strong></div>
       <div>Kalpataru First Grade Science College, Tiptur · BCA (Data Science) 2024–27</div>
-      <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'center', gap: '18px' }}>
-        <a href="https://linkedin.com/in/deepub-842443390" target="_blank" rel="noreferrer" style={{ color: '#5b5fef', display: 'flex', alignItems: 'center' }}>
-          <FaLinkedin size={20} />
-        </a>
-        <a href="https://github.com/deepub144-creative" target="_blank" rel="noreferrer" style={{ color: '#5b5fef', display: 'flex', alignItems: 'center' }}>
-          <FaGithub size={20} />
-        </a>
-        <a href="https://leetcode.com/u/deepub12/" target="_blank" rel="noreferrer" style={{ color: '#5b5fef', display: 'flex', alignItems: 'center' }}>
-          <SiLeetcode size={20} />
-        </a>
-      </div>
     </div>
   );
 }
