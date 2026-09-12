@@ -59,12 +59,17 @@ export default function UploadAnalyze() {
     formData.append('file', selectedFile);
     try {
       const res = await axios.post(`${API_URL}/detect-columns`, formData, {
-        headers: { 'Content-Type': 'multipart/form-data' }
+        headers: { 'Content-Type': 'multipart/form-data' },
+        timeout: 60000
       });
       setColumnsFound(res.data.columns_found);
       setMapping(res.data.suggested_mapping);
     } catch (err) {
-      setError('Could not read this CSV file.');
+      if (err.request && !err.response) {
+        setError('Backend server on Render is spinning up from sleep (~30s). Please try clicking again in a few seconds.');
+      } else {
+        setError('Could not read this CSV file.');
+      }
     }
     setDetecting(false);
   };
@@ -79,11 +84,16 @@ export default function UploadAnalyze() {
     formData.append('mapping', JSON.stringify(mapping));
     try {
       const res = await axios.post(`${API_URL}/analyze-upload`, formData, {
-        headers: { 'Content-Type': 'multipart/form-data' }
+        headers: { 'Content-Type': 'multipart/form-data' },
+        timeout: 60000
       });
       setResult(res.data); // raw GBP values stay as-is; converted only at display time
     } catch (err) {
-      setError(err.response?.data?.detail || 'Could not analyze this file.');
+      if (err.request && !err.response) {
+        setError('Backend server on Render is spinning up (~30s). Please click Analyze again shortly.');
+      } else {
+        setError(err.response?.data?.detail || 'Could not analyze this file.');
+      }
     }
     setLoading(false);
   };
@@ -97,7 +107,8 @@ export default function UploadAnalyze() {
     try {
       const res = await axios.post(`${API_URL}/generate-report`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
-        responseType: 'blob'
+        responseType: 'blob',
+        timeout: 60000
       });
       const url = window.URL.createObjectURL(new Blob([res.data]));
       const link = document.createElement('a');
@@ -107,7 +118,11 @@ export default function UploadAnalyze() {
       link.click();
       link.remove();
     } catch (err) {
-      setError('Could not generate the PDF report.');
+      if (err.request && !err.response) {
+        setError('Backend server on Render is spinning up (~30s). Please try Download PDF again shortly.');
+      } else {
+        setError('Could not generate the PDF report.');
+      }
     }
     setPdfLoading(false);
   };
