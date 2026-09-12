@@ -149,12 +149,40 @@ export default function UploadAnalyze() {
         .ua-select { transition: border-color 0.15s ease; }
       `}</style>
 
-      <h1 style={{ fontSize: '24px', fontWeight: 700, marginBottom: '4px', color: C.textPrimary }}>
-        Client Data Upload
-      </h1>
-      <p style={{ color: C.textMuted, fontSize: '14px', marginBottom: '24px' }}>
-        Upload any client's transaction CSV — columns are auto-detected and can be adjusted below
-      </p>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '24px' }}>
+        <div>
+          <h1 style={{ fontSize: '24px', fontWeight: 700, marginBottom: '4px', color: C.textPrimary }}>
+            Client Data Upload
+          </h1>
+          <p style={{ color: C.textMuted, fontSize: '14px' }}>
+            Upload any client's transaction CSV — columns are auto-detected and can be adjusted below
+          </p>
+        </div>
+        <div style={{ display: 'flex', gap: '10px' }}>
+          <a
+            href="/sample_retail_transactions.csv"
+            download="sample_retail_transactions.csv"
+            style={{
+              display: 'flex', alignItems: 'center', gap: '6px', padding: '8px 14px',
+              borderRadius: '8px', border: `1px solid ${C.cardBorder}`, background: C.cardBg,
+              color: C.textPrimary, fontSize: '13px', textDecoration: 'none', fontWeight: 500
+            }}
+          >
+            <Download size={14} color={C.accent} /> Sample Retail CSV
+          </a>
+          <a
+            href="/sample_ecommerce_orders.csv"
+            download="sample_ecommerce_orders.csv"
+            style={{
+              display: 'flex', alignItems: 'center', gap: '6px', padding: '8px 14px',
+              borderRadius: '8px', border: `1px solid ${C.cardBorder}`, background: C.cardBg,
+              color: C.textPrimary, fontSize: '13px', textDecoration: 'none', fontWeight: 500
+            }}
+          >
+            <Download size={14} color={C.accent} /> Sample E-Commerce CSV
+          </a>
+        </div>
+      </div>
 
       <div className="fade-card" style={{ background: C.cardBg, borderRadius: '12px', border: `1px solid ${C.cardBorder}`, padding: '24px', marginBottom: '20px' }}>
         <label
