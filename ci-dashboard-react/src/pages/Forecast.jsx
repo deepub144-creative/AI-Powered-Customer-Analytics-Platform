@@ -18,9 +18,13 @@ const C = {
 
 export default function Forecast() {
   const { currency, rates } = useContext(CurrencyContext);
-  const { symbol, rate } = rates[currency];   // <-- look up symbol/rate from the rates object
+  const { symbol, rate } = rates[currency];
 
   const [days, setDays] = useState(30);
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   const generateFallbackData = (numDays) => {
     const baseDate = new Date();
     const result = [];
@@ -52,7 +56,6 @@ export default function Forecast() {
       })
       .catch(err => {
         console.warn('Forecast API unreachable, loading estimated preview data:', err);
-        // Use fallback data so the dashboard UI remains fully functional
         setData(generateFallbackData(days));
         if (err.request && !err.response) {
           setError('Backend server on Render is waking up from sleep mode (~30s). Showing preview forecast data below.');
@@ -122,7 +125,7 @@ export default function Forecast() {
         </div>
       )}
 
-      {!loading && !error && (
+      {!loading && data.length > 0 && (
         <>
           <div className="fade-card" style={{ background: C.cardBg, borderRadius: '12px', border: `1px solid ${C.cardBorder}`, padding: '20px', marginBottom: '20px' }}>
             <ResponsiveContainer width="100%" height={280}>
